@@ -10,7 +10,8 @@
   var currentPosition = { x: -1, y: -1 };
 
   function init () {
-    event = new Event('touchtap');
+    event = document.createEvent('CustomEvent');
+    event.initEvent('touchtap', true, true);
     document.addEventListener('touchstart', touchstart);
     document.addEventListener('touchend', touchend);
     document.addEventListener('touchcancel', touchend);
