@@ -20,7 +20,7 @@ npm install --save touchtap-event.js
 ## Including
 
 ```html
-<script src="touchtap-event.js"></script>
+<script src="dist/touchtap-event.min.js"></script>
 ```
 
 ## Usage
