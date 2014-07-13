@@ -1,0 +1,22 @@
+{
+  "name": "touchtap-event.js",
+  "main": "touchtap-event.js",
+  "version": "0.1.0",
+  "homepage": "https://github.com/Tyriar/touchtap-event.js",
+  "authors": [
+    "Tyriar (http://www.growingwiththeweb.com)"
+  ],
+  "description": "A JavaScript library that adds a \"touchtap\" custom event to the page",
+  "keywords": [
+    "touch",
+    "event"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}

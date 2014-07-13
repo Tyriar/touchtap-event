@@ -1,0 +1,20 @@
+{
+  "name": "touchtap-event.js",
+  "version": "0.1.0",
+  "description": "A JavaScript library that adds a \"touchtap\" custom event to the page",
+  "main": "touchtap-event.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Tyriar/touchtap-event.js.git"
+  },
+  "keywords": [
+    "touch",
+    "event"
+  ],
+  "author": "Daniel Imms (http://www.growingwiththeweb.com/)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Tyriar/touchtap-event.js/issues"
+  },
+  "homepage": "https://github.com/Tyriar/touchtap-event.js"
+}
