@@ -3,15 +3,15 @@
 (function () {
   'use strict';
 
-  var touchTapEvent;
+  var event;
   var isTapLength;
   var tapLengthTimeout;
   var startPosition   = { x: -1, y: -1 };
   var currentPosition = { x: -1, y: -1 };
 
   function init () {
-    touchTapEvent = document.createEvent('CustomEvent');
-    touchTapEvent.initEvent('touchtap', true, true);
+    event = document.createEvent('CustomEvent');
+    event.initEvent('touchtap', true, true);
     document.addEventListener('touchstart', touchstart);
     document.addEventListener('touchend', touchend);
     document.addEventListener('touchcancel', touchend);
@@ -37,7 +37,7 @@
     if (isTapLength &&
         approximatelyEqual(startPosition.x, currentPosition.x) &&
         approximatelyEqual(startPosition.y, currentPosition.y)) {
-      e.target.dispatchEvent(touchTapEvent, {
+      e.target.dispatchEvent(event, {
         'target': e.target
       });
     }
