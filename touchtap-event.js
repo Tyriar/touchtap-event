@@ -38,7 +38,9 @@
         approximatelyEqual(startPosition.x, currentPosition.x) &&
         approximatelyEqual(startPosition.y, currentPosition.y)) {
       e.target.dispatchEvent(event, {
-        'target': e.target
+        'target': e.target,
+        'touchX': currentPosition.x,
+        'touchY': currentPosition.y
       });
     }
   }
