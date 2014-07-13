@@ -1,6 +1,6 @@
 {
   "name": "touchtap-event.js",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "A JavaScript library that adds a \"touchtap\" custom event to the page",
   "main": "touchtap-event.js",
   "scripts": {
