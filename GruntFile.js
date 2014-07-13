@@ -18,6 +18,16 @@ module.exports = function(grunt) {
     }
   });
 
+  grunt.loadNpmTasks('grunt-contrib-jasmine');
+  grunt.config('jasmine', {
+    test: {
+      src: 'dist/touchtap-event.js',
+      options: {
+        specs: 'test/*-spec.js'
+      }
+    }
+  });
+
   grunt.loadNpmTasks('grunt-contrib-uglify');
   grunt.config('uglify', {
     options: {
@@ -36,6 +46,10 @@ module.exports = function(grunt) {
     'clean:dist',
     'copy:dist',
     'uglify:dist'
+  ]);
+
+  grunt.registerTask('test', [
+    'jasmine:test',
   ]);
 
   grunt.registerTask('default', [
