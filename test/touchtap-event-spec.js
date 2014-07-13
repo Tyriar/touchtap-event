@@ -82,8 +82,8 @@ describe('touchtap-event', function () {
       it('should dispatch the event with the coordinates attached', function () {
         elem.addEventListener('touchtap', function (e) {
           expect(e.target).toBe(elem);
-          expect(e.touchX).toBe(5);
-          expect(e.touchY).toBe(10);
+          expect(e.customData.touchX).toBe(5);
+          expect(e.customData.touchY).toBe(10);
           done();
         });
 

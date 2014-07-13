@@ -37,11 +37,11 @@
     if (isTapLength &&
         approximatelyEqual(startPosition.x, currentPosition.x) &&
         approximatelyEqual(startPosition.y, currentPosition.y)) {
-      e.target.dispatchEvent(touchTapEvent, {
-        'target': e.target,
-        'touchX': currentPosition.x,
-        'touchY': currentPosition.y
-      });
+      touchTapEvent.customData = {
+        touchX: currentPosition.x,
+        touchY: currentPosition.y
+      };
+      e.target.dispatchEvent(touchTapEvent);
     }
   }
 
