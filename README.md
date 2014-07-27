@@ -1,4 +1,4 @@
-# touchtap-event.js
+# touchtap-event.js [![NPM version](http://img.shields.io/npm/v/touchtap-event.js.svg?style=flat)](https://www.npmjs.org/package/touchtap-event.js)
 
 [![Build Status](http://img.shields.io/travis/Tyriar/touchtap-event.js.svg?style=flat)](https://travis-ci.org/Tyriar/touchtap-event.js)
 [![Code Climate](http://img.shields.io/codeclimate/github/Tyriar/touchtap-event.js.svg?style=flat)](https://codeclimate.com/github/Tyriar/touchtap-event.js)
