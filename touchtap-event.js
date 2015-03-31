@@ -42,6 +42,9 @@
         touchY: currentPosition.y
       };
       e.target.dispatchEvent(touchTapEvent);
+      // Prevent a ghost click on mobile browsers (delay click event unless
+      // mobile viewport is present)
+      e.preventDefault();
     }
   }
 
