@@ -1,14 +1,14 @@
 {
-  "name": "touchtap-event.js",
+  "name": "touchtap-event",
   "version": "1.1.2",
-  "description": "A JavaScript library that adds a \"touchtap\" custom event to the page",
+  "description": "Adds a \"touchtap\" custom event which responds to touch only",
   "main": "touchtap-event.js",
   "scripts": {
     "test": "grunt test"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/Tyriar/touchtap-event.js.git"
+    "url": "https://github.com/Tyriar/touchtap-event.git"
   },
   "keywords": [
     "touch",
@@ -17,9 +17,9 @@
   "author": "Daniel Imms (http://www.growingwiththeweb.com/)",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/Tyriar/touchtap-event.js/issues"
+    "url": "https://github.com/Tyriar/touchtap-event/issues"
   },
-  "homepage": "https://github.com/Tyriar/touchtap-event.js",
+  "homepage": "https://github.com/Tyriar/touchtap-event",
   "devDependencies": {
     "grunt": "^0.4.5",
     "grunt-contrib-clean": "^0.5.0",
