@@ -4,6 +4,16 @@ module.exports = function(grunt) {
     pkg: grunt.file.readJSON('package.json')
   });
 
+  grunt.loadNpmTasks('grunt-eslint');
+  grunt.config('eslint', {
+    dist: {
+      options: {
+        configFile: '.eslintrc',
+      },
+      src: ['touchtap-event.js']
+    }
+  });
+
   grunt.loadNpmTasks('grunt-contrib-jasmine');
   grunt.config('jasmine', {
     test: {
@@ -19,6 +29,7 @@ module.exports = function(grunt) {
   ]);
 
   grunt.registerTask('default', [
+    'eslint',
     'test'
   ]);
 };

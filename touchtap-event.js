@@ -10,16 +10,21 @@
   var touchTapEvent;
   var isTapLength;
   var tapLengthTimeout;
-  var startPosition   = { x: -1, y: -1 };
+  var startPosition = { x: -1, y: -1 };
   var currentPosition = { x: -1, y: -1 };
 
-  function init () {
-    touchTapEvent = document.createEvent('CustomEvent');
-    touchTapEvent.initEvent('touchtap', true, true);
-    document.addEventListener('touchstart', touchstart);
-    document.addEventListener('touchend', touchend);
-    document.addEventListener('touchcancel', touchend);
-    document.addEventListener('touchmove', touchmove);
+  function getPointerEvent(e) {
+    if (e.originalEvent && e.originalEvent.targetTouches) {
+      return e.originalEvent.targetTouches[0];
+    }
+    if (e.targetTouches) {
+      return e.targetTouches[0];
+    }
+    return e;
+  }
+
+  function approximatelyEqual(a, b) {
+    return Math.abs(a - b) < 2;
   }
 
   function touchstart(e) {
@@ -58,18 +63,13 @@
     currentPosition.y = pointerEvent.pageY;
   }
 
-  function approximatelyEqual(a, b) {
-    return Math.abs(a - b) < 2;
-  }
-
-  function getPointerEvent(e) {
-    if (e.originalEvent && e.originalEvent.targetTouches) {
-      return e.originalEvent.targetTouches[0];
-    }
-    if (e.targetTouches) {
-      return e.targetTouches[0];
-    }
-    return e;
+  function init() {
+    touchTapEvent = document.createEvent('CustomEvent');
+    touchTapEvent.initEvent('touchtap', true, true);
+    document.addEventListener('touchstart', touchstart);
+    document.addEventListener('touchend', touchend);
+    document.addEventListener('touchcancel', touchend);
+    document.addEventListener('touchmove', touchmove);
   }
 
   init();
