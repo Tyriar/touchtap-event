@@ -1,5 +1,9 @@
-/*! touchtap-event.js | (c) 2014 Daniel Imms | github.com/Tyriar/touchtap-event.js/blob/master/LICENSE */
-
+/**
+ * @license
+ * touchtap-event.js <http://github.com/Tyriar/touchtap-event.js>
+ * Copyright 2014 Daniel Imms <http://www.growingwiththeweb.com>
+ * Released under the MIT license <http://github.com/Tyriar/touchtap-event.js/blob/master/LICENSE>
+ */
 (function () {
   'use strict';
 
