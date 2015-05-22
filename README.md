@@ -35,3 +35,7 @@ elem.addEventListener('touchtap', function (e) {
   console.log(e);
 });
 ```
+
+## See also
+
+- [abbr-touch.js](https://github.com/Tyriar/abbr-touch.js)
