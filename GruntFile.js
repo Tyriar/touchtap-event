@@ -25,11 +25,11 @@ module.exports = function(grunt) {
   });
 
   grunt.registerTask('test', [
+    'eslint',
     'jasmine:test',
   ]);
 
   grunt.registerTask('default', [
-    'eslint',
     'test'
   ]);
 };
