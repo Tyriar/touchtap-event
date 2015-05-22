@@ -13,7 +13,12 @@
   var startPosition = { x: -1, y: -1 };
   var currentPosition = { x: -1, y: -1 };
 
-  function getPointerEvent(e) {
+  /**
+   * Gets the touch object from a touch* event.
+   * @param {Event} e The event.
+   * @returns {Touch} The (first) touch object from the event.
+   */
+  function getTouchObject(e) {
     if (e.originalEvent && e.originalEvent.targetTouches) {
       return e.originalEvent.targetTouches[0];
     }
@@ -23,16 +28,26 @@
     return e;
   }
 
+  /**
+   * Gets whether two numbers are approximately equal to each other.
+   * @param {number} a The first number.
+   * @param {number} b The second number.
+   * @returns {Boolean}
+   */
   function approximatelyEqual(a, b) {
     return Math.abs(a - b) < 2;
   }
 
+  /**
+   * Handler for the touchstart event.
+   * @param {Event} The touchstart event.
+   */
   function touchstart(e) {
-    var pointerEvent = getPointerEvent(e);
-    startPosition.x = pointerEvent.pageX;
-    startPosition.y = pointerEvent.pageY;
-    currentPosition.x = pointerEvent.pageX;
-    currentPosition.y = pointerEvent.pageY;
+    var touchObject = getTouchObject(e);
+    startPosition.x = touchObject.pageX;
+    startPosition.y = touchObject.pageY;
+    currentPosition.x = touchObject.pageX;
+    currentPosition.y = touchObject.pageY;
     isTapLength = true;
     if (tapLengthTimeout) {
       clearTimeout(tapLengthTimeout);
@@ -42,6 +57,10 @@
     }, 200);
   }
 
+  /**
+   * Handler for the touchend event.
+   * @param {Event} The touchend event.
+   */
   function touchend(e) {
     if (isTapLength &&
         approximatelyEqual(startPosition.x, currentPosition.x) &&
@@ -57,12 +76,19 @@
     }
   }
 
+  /**
+   * Handler for the touchmove event.
+   * @param {Event} The touchmove event.
+   */
   function touchmove(e) {
-    var pointerEvent = getPointerEvent(e);
-    currentPosition.x = pointerEvent.pageX;
-    currentPosition.y = pointerEvent.pageY;
+    var touchObject = getTouchObject(e);
+    currentPosition.x = touchObject.pageX;
+    currentPosition.y = touchObject.pageY;
   }
 
+  /**
+   * Initialises the library.
+   */
   function init() {
     touchTapEvent = document.createEvent('CustomEvent');
     touchTapEvent.initEvent('touchtap', true, true);
