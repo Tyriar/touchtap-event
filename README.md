@@ -20,7 +20,11 @@ npm install --save touchtap-event.js
 ## Including
 
 ```html
-<script src="dist/touchtap-event.min.js"></script>
+<!-- Bower -->
+<script src="bower_components/touchtap-event.js/touchtap-event.js"></script>
+
+<!-- NPM -->
+<script src="node_modules/touchtap-event.js/touchtap-event.js"></script>
 ```
 
 ## Usage
