@@ -40,7 +40,7 @@
 
   /**
    * Handler for the touchstart event.
-   * @param {Event} The touchstart event.
+   * @param {Event} e The touchstart event.
    */
   function touchstart(e) {
     var touchObject = getTouchObject(e);
@@ -59,7 +59,7 @@
 
   /**
    * Handler for the touchend event.
-   * @param {Event} The touchend event.
+   * @param {Event} e The touchend event.
    */
   function touchend(e) {
     if (isTapLength &&
@@ -78,7 +78,7 @@
 
   /**
    * Handler for the touchmove event.
-   * @param {Event} The touchmove event.
+   * @param {Event} e The touchmove event.
    */
   function touchmove(e) {
     var touchObject = getTouchObject(e);
