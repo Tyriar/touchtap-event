@@ -1,7 +1,6 @@
-# touchtap-event [![NPM version](http://img.shields.io/npm/v/touchtap-event.svg?style=flat)](https://www.npmjs.org/package/touchtap-event)
+# touchtap-
 
-[![Build Status](http://img.shields.io/travis/Tyriar/touchtap-event.svg?style=flat)](https://travis-ci.org/Tyriar/touchtap-event)
-[![Code Climate](http://img.shields.io/codeclimate/github/Tyriar/touchtap-event.svg?style=flat)](https://codeclimate.com/github/Tyriar/touchtap-event)
+[![Build Status](https://travis-ci.org/Tyriar/touchtap-event.svg?branch=master)](https://travis-ci.org/Tyriar/touchtap-event)
 
 A lightweight JavaScript library that adds a `touchtap` custom event to the document which can be listened to on any element. This will only emit an event on touch enabled devices or those emulating touch devices.
 
