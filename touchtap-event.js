@@ -87,12 +87,22 @@
    * Initialises the library.
    */
   function init() {
-    touchTapEvent = document.createEvent('CustomEvent');
-    touchTapEvent.initEvent('touchtap', true, true);
-    document.addEventListener('touchstart', touchstart);
-    document.addEventListener('touchend', touchend);
-    document.addEventListener('touchcancel', touchend);
-    document.addEventListener('touchmove', touchmove);
+    try {
+      // The basic events module is supported by most browsers, including IE9 and newer.
+      // https://developer.mozilla.org/en-US/docs/Web/API/Document/createEvent#Example
+      touchTapEvent = document.createEvent('Event');
+      touchTapEvent.initEvent('touchtap', true, true);
+
+      // EventTarget.addEventListener() is supported by most browsers, including IE9 and newer.
+      // https://developer.mozilla.org/en-US/docs/Web/API/EventTarget/addEventListener#Browser_compatibility
+      document.addEventListener('touchstart', touchstart, false);
+      document.addEventListener('touchend', touchend, false);
+      document.addEventListener('touchcancel', touchend, false);
+      document.addEventListener('touchmove', touchmove, false);
+    }
+    catch (err) {
+      // Ignore "Object doesn't support this property or method" in IE8 and earlier.
+    }
   }
 
   init();
