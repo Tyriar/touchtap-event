@@ -1,6 +1,6 @@
 {
   "name": "touchtap-event",
-  "version": "2.0.1",
+  "version": "2.0.2",
   "description": "Adds a \"touchtap\" custom event which responds to touch only",
   "main": "touchtap-event.js",
   "scripts": {
